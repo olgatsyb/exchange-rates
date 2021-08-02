@@ -1,5 +1,5 @@
 'use strict';
-function handleSubmit() {
+function refreshRates() {
 //    evt.preventDefault();
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:9999/api/hw13', false);
@@ -23,4 +23,4 @@ const usdBuyRateEl = document.getElementById('usd-buy-rate');
 const usdSellRateEl = document.getElementById('usd-sell-rate');
 const eurBuyRateEl = document.getElementById('eur-buy-rate');
 const eurSellRateEl = document.getElementById('eur-sell-rate');
-handleSubmit()
+refreshRates()
