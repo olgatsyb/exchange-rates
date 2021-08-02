@@ -1,16 +1,8 @@
 'use strict';
 function refreshRates() {
-//    evt.preventDefault();
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:9999/api/hw13', false);
     xhr.send();
-    if (xhr.status !== 200) {
-        // обработать ошибку
-        alert(xhr.status + ': ' + xhr.statusText); // пример вывода: 404: Not Found
-    } else {
-        // вывести результат
-        alert(xhr.responseText); // responseText -- текст ответа.
-    }
     const data = JSON.parse(xhr.responseText);
     dateEl.textContent = data.date;
     usdBuyRateEl.textContent = data.usd.buyRate;
