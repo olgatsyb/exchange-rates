@@ -1,4 +1,5 @@
 'use strict';
+
 function refreshRates() {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:9999/api/hw13', false);
@@ -10,9 +11,11 @@ function refreshRates() {
     eurBuyRateEl.textContent = data.eur.buyRate;
     eurSellRateEl.textContent = data.eur.sellRate;
 }
+
 const dateEl = document.getElementById('date');
 const usdBuyRateEl = document.getElementById('usd-buy-rate');
 const usdSellRateEl = document.getElementById('usd-sell-rate');
 const eurBuyRateEl = document.getElementById('eur-buy-rate');
 const eurSellRateEl = document.getElementById('eur-sell-rate');
+
 refreshRates()
